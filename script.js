@@ -5,7 +5,7 @@ function createDelete(newli, taskValue) {
     deleteButton.innerHTML = "delete";
     newli.appendChild(deleteButton);
     deleteButton.style.float = "left";
-    deleteButton.style.margin = "10px 0px 5px 10px";
+    // deleteButton.style.margin = "5px 0px 5px 10px";
 
     deleteButton.addEventListener('click', () => deleteTask(newli, taskValue));
 }
@@ -15,7 +15,7 @@ function createFinished(newli, taskValue) {
     finishedButton.innerHTML = "finished";
     newli.appendChild(finishedButton);
     finishedButton.style.float = "right";
-    finishedButton.style.margin = "10px 10px 5px 0px";
+    // finishedButton.style.margin = "5px 10px 5px 0px";
 
     finishedButton.addEventListener('click', () => finishTask(newli, taskValue));
 }
