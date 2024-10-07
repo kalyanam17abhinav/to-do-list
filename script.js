@@ -2,7 +2,7 @@ let task = document.getElementById("inputText");
 
 function createDelete(newli, taskValue) {
     let deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "delete";
+    deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
     newli.appendChild(deleteButton);
     deleteButton.style.float = "left";
     // deleteButton.style.margin = "5px 0px 5px 10px";
@@ -12,7 +12,7 @@ function createDelete(newli, taskValue) {
 
 function createFinished(newli, taskValue) {
     let finishedButton = document.createElement("button");
-    finishedButton.innerHTML = "finished";
+    finishedButton.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     newli.appendChild(finishedButton);
     finishedButton.style.float = "right";
     // finishedButton.style.margin = "5px 10px 5px 0px";
@@ -30,7 +30,7 @@ function addTask() {
     document.getElementById("taskListul").appendChild(newli);
     newli.style.fontWeight = "bolder";
     newli.style.fontSize = "25px";
-    newli.style.wordWrap = "break-word";
+    newli.style.overflowWrap = "break-word";
 
     createDelete(newli, taskValue);
     createFinished(newli, taskValue);
@@ -75,7 +75,7 @@ function displayTasks() {
         document.getElementById("taskListul").appendChild(newli);
         newli.style.fontWeight = "bolder";
         newli.style.fontSize = "25px";
-        newli.style.wordWrap = "break-word";
+        newli.style.overflowWrap = "break-word";
 
         if (taskObj.isFinished) {
             newli.style.backgroundColor = "#f4a261";
